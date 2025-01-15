@@ -1,2 +1,23 @@
 pip install urllib3==1.25.11 requests==2.24.0 certifi==2019.11.28
 pip install pychrom
+Alternative Lösung: Beibehalten von Python 3.5 (Nicht empfohlen)
+Falls ein Upgrade auf eine neuere Python-Version aus irgendeinem Grund nicht möglich ist, kannst du versuchen, ältere Versionen der benötigten Pakete zu installieren, die mit Python 3.5 kompatibel sind. Beachte jedoch, dass dies zu weiteren Kompatibilitätsproblemen führen kann und nicht empfohlen wird.
+
+Schritt 1: Verwende pip als Python-Modul
+Da der pip-Befehl selbst beschädigt zu sein scheint, benutze pip als Python-Modul:
+
+bash
+Code kopieren
+python3.5 -m pip install urllib3==1.25.11 requests==2.24.0 certifi==2019.11.28
+Schritt 2: Installiere eine kompatible Version von websocket-client
+Der Syntaxfehler entsteht durch die Verwendung einer Version von websocket-client, die Python 3.5 nicht unterstützt. Installiere eine ältere Version, die kompatibel ist:
+
+bash
+Code kopieren
+python3.5 -m pip install websocket-client==0.57.0
+Schritt 3: Installiere eine kompatible Version von pychrome
+Überprüfe, ob es eine ältere Version von pychrome gibt, die mit Python 3.5 kompatibel ist. Zum Beispiel:
+
+bash
+Code kopieren
+python3.5 -m pip install pychrome==0.2.3
